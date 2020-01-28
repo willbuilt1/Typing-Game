@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'TypingGame';
+  onType(text){
+    const randomText = document.querySelector('.randomText').innerHTML;
+    const index = text.length -1;
+  }
 }

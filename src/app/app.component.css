@@ -1,0 +1,14 @@
+.appContainer{
+    width: 400px;
+    margin: 0 auto;
+    border: solid 1px #5e5c5c;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+.textInput{
+    height: 30px;
+    width: 80%;
+}
+
