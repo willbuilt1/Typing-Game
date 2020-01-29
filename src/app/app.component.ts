@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { lorem } from 'faker'
 
 @Component({
   selector: 'app-root',
@@ -6,8 +7,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  onType(text){
-    const randomText = document.querySelector('.randomText').innerHTML;
-    const index = text.length -1;
+
+  randomText = lorem.sentence();
+  enteredText = '';
+
+  generateText(){
+    this.randomText = lorem.sentence();
+    this.enteredText = ''
   }
-}
+ 
+  onType(text: string){
+    this.enteredText = text;
+  }
+
+  comparison(letter, entered){
+    if(!entered){
+      return "black"
+    }
+   return letter == entered ? 'green' : 'red';
+  }
+  }

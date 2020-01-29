@@ -1,6 +1,11 @@
 <div class="appContainer">
+  <button (click) = "generateText()">New game</button>
   <h1>Typing Game</h1>
-  <p class="randomText">Placeholder Text</p>
+    <p>
+    <span [class] = "comparison(letter, enteredText[i])"
+    *ngFor="let letter of randomText.split(''); let i=index">{{letter}}</span>  
+    </p>
   <input type="text" class="textInput" (input) = "onType($event.target.value)">
+  <h3 *ngIf="randomText == enteredText">You Win!</h3>
 </div>
 
